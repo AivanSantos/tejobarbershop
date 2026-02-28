@@ -31,7 +31,12 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-4 md:px-8">
         <a href="#inicio" className="flex items-center">
-          <img src={images.logo} alt="Tejo Barber Shop" className="h-10 md:h-12" />
+          <img
+            src={images.logo}
+            alt="Tejo Barber Shop"
+            className="h-10 md:h-12 object-contain"
+            onError={(e) => { e.currentTarget.src = "https://placehold.co/160x48/1a1a1a/ffffff?text=Tejo+Barber"; }}
+          />
         </a>
 
         {/* Desktop */}

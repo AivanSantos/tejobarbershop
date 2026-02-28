@@ -1,0 +1,10 @@
+COLOQUE A LOGO AQUI
+===================
+Renomeie a imagem da logo da Tejo Barber Shop para:  logo.png
+e coloque-a nesta pasta (public).
+
+O site usa a logo em:
+- Barra de navegação (topo)
+- Rodapé
+
+Nome do ficheiro obrigatório:  logo.png

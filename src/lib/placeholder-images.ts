@@ -1,10 +1,10 @@
 /**
  * Imagens do site. O build não depende de ficheiros em src/assets.
- * Para usar imagens reais: coloque os ficheiros em public/ e substitua
- * os valores abaixo por "/logo.png", "/hero-barber.jpg", etc.
+ * Logo: public/logo.png (coloque a logo da Tejo Barber Shop nessa pasta).
+ * Outras imagens: coloque em public/ e substitua os valores abaixo.
  */
 export const images = {
-  logo: "https://placehold.co/160x48/1a1a1a/ffffff?text=Tejo+Barber",
+  logo: "/logo.png",
   heroBarber: "https://placehold.co/1920x1080/2a2a2a/888?text=Tejo+Barber+Shop",
   barberAction: "https://placehold.co/800x1000/2a2a2a/888?text=Barbeiro",
   portfolio: [

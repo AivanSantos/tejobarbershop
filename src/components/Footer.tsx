@@ -8,7 +8,12 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
             <a href="#inicio">
-              <img src={images.logo} alt="Tejo Barber Shop" className="h-10" />
+              <img
+                src={images.logo}
+                alt="Tejo Barber Shop"
+                className="h-10 object-contain"
+                onError={(e) => { e.currentTarget.src = "https://placehold.co/160x48/1a1a1a/ffffff?text=Tejo+Barber"; }}
+              />
             </a>
             <p className="text-muted-foreground text-sm font-body mt-2">
               Tradição e estilo em Póvoa de Santa Iria.
