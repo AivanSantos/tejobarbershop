@@ -1,16 +1,11 @@
 import { motion } from "framer-motion";
 
-const HERO_BACKGROUND = "/hero.png";
-
 const Hero = () => {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen min-h-[100dvh] w-full flex items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${HERO_BACKGROUND})` }}
+      className="relative min-h-screen min-h-[100dvh] w-full flex items-center justify-center overflow-hidden bg-neutral-900"
     >
-      <div className="absolute inset-0 bg-black/55" />
-
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <motion.h1

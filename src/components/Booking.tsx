@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Calendar, Clock, User, Scissors, CheckCircle } from "lucide-react";
+import { Calendar, Clock, User, Scissors, CheckCircle, ExternalLink } from "lucide-react";
 
 const serviceOptions = [
   "Corte Clássico – 15€",
@@ -22,9 +22,12 @@ const FORMSPREE_ID = (import.meta.env.VITE_FORMSPREE_ID as string | undefined) |
 /** Email da empresa: configure no Formspree (Settings do formulário) como destino das marcações */
 export const COMPANY_EMAIL = "geral@tejobarbershop.pt";
 
+type BookingMode = "form" | "noona";
+
 const Booking = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [bookingMode, setBookingMode] = useState<BookingMode>("noona");
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -110,6 +113,57 @@ const Booking = () => {
           </h2>
         </motion.div>
 
+        {/* Tabs: Noona ou Formulário */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="flex gap-2 mb-8 justify-center"
+        >
+          <button
+            type="button"
+            onClick={() => setBookingMode("noona")}
+            className={`px-6 py-3 rounded-lg font-medium text-sm uppercase tracking-wider transition-all ${
+              bookingMode === "noona"
+                ? "bg-primary text-primary-foreground shadow-gold"
+                : "bg-card border border-border text-muted-foreground hover:border-primary hover:text-foreground"
+            }`}
+          >
+            <ExternalLink className="inline mr-2" size={16} />
+            Marcar pelo Noona
+          </button>
+          <button
+            type="button"
+            onClick={() => setBookingMode("form")}
+            className={`px-6 py-3 rounded-lg font-medium text-sm uppercase tracking-wider transition-all ${
+              bookingMode === "form"
+                ? "bg-primary text-primary-foreground shadow-gold"
+                : "bg-card border border-border text-muted-foreground hover:border-primary hover:text-foreground"
+            }`}
+          >
+            <Calendar className="inline mr-2" size={16} />
+            Formulário
+          </button>
+        </motion.div>
+
+        {bookingMode === "noona" ? (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="bg-card border border-border rounded-lg overflow-hidden"
+          >
+            <iframe
+              src="https://noona.pt/tejobarbershop/book?iframe=true&darkModeDisabled=true&showCancelButton=true"
+              frameBorder={0}
+              width="100%"
+              height={800}
+              style={{ height: "80vh" }}
+              title="Marcação Noona - Tejo Barber Shop"
+              className="min-h-[600px]"
+            />
+          </motion.div>
+        ) : (
         <motion.form
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -226,6 +280,7 @@ const Booking = () => {
             {loading ? "A enviar…" : "Confirmar Marcação"}
           </button>
         </motion.form>
+        )}
       </div>
     </section>
   );
