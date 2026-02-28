@@ -14,14 +14,14 @@ const team = [
   {
     name: "Arthur Medrado",
     role: "Barbeiro & Sócio",
-    image: images.barber2,
+    image: "/Arthur.jpeg",
     bio: "Sócio e barbeiro talentoso, o Arthur traz criatividade e técnica apurada à equipa. Especialista em cortes modernos e tendências atuais.",
     specialties: ["Cortes Modernos", "Styling"],
   },
   {
     name: "Ricardo Pereira",
     role: "Barbeiro",
-    image: images.barber3,
+    image: "/Ricardo.jpeg",
     bio: "O Ricardo combina precisão e atenção ao detalhe em cada serviço. Com um toque pessoal, garante resultados impecáveis para todos os clientes.",
     specialties: ["Barba Tradicional", "Cortes Clássicos"],
   },
