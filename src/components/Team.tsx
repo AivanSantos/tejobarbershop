@@ -13,7 +13,7 @@ const team = [
   },
   {
     name: "Arthur Medrado",
-    role: "Barbeiro e Gerente",
+    role: "Barbeiro & Gerente",
     image: "/Arthur.jpeg",
     bio: "Sócio e barbeiro talentoso, o Arthur traz criatividade e técnica apurada à equipa. Especialista em cortes modernos e tendências atuais.",
     specialties: ["Cortes Modernos", "Styling"],
