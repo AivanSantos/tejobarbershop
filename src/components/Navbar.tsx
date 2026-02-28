@@ -6,7 +6,6 @@ import { images } from "@/lib/placeholder-images";
 const navLinks = [
   { label: "Início", href: "#inicio" },
   { label: "Sobre", href: "#sobre" },
-  { label: "Serviços", href: "#servicos" },
   { label: "Portfólio", href: "#portfolio" },
   { label: "Equipa", href: "#equipa" },
   { label: "Avaliações", href: "#avaliacoes" },

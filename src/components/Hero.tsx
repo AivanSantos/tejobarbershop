@@ -45,10 +45,10 @@ const Hero = () => {
             Marcar Agora
           </a>
           <a
-            href="#servicos"
+            href="#portfolio"
             className="border-2 border-white text-white px-10 py-4 text-base font-semibold uppercase tracking-wider rounded hover:bg-white/10 transition-colors"
           >
-            Ver Serviços
+            Ver Portfólio
           </a>
         </motion.div>
       </div>
