@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const HERO_BACKGROUND = "https://ideogram.ai/assets/image/balanced/response/kzDYCfuNSSCIlmEGNMhK_A@2k";
+const HERO_BACKGROUND = "/hero.png";
 
 const Hero = () => {
   return (
