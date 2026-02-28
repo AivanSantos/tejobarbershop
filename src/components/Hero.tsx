@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
 
 const HERO_BACKGROUND =
-  "https://media.istockphoto.com/id/1288515834/pt/foto/aerial-view-of-sanctuary-of-christ-the-king-santuario-de-cristo-rei-drone-photo-at-sunrise.jpg?s=612x612&w=0&k=20&c=0x04O1m_gB6DrSRalSRUkwzCoscWT9KSNm18eoZHX_M=";
+  "https://img.freepik.com/fotos-premium/diferentes-ferramentas-de-cabeleireiro-em-mesa-cinzenta-contra-fundo-preto-espaco-para-texto_495423-82802.jpg?semt=ais_hybrid&w=740&q=80";
 
 const Hero = () => {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image - Cristo Rei ao nascer do sol */}
+      {/* Background image - ferramentas de cabeleireiro */}
       <div className="absolute inset-0">
         <img
           src={HERO_BACKGROUND}
-          alt="Vista aérea do Santuário de Cristo Rei ao nascer do sol, Portugal"
+          alt="Ferramentas de cabeleireiro na Tejo Barber Shop"
           className="w-full h-full object-cover"
           loading="eager"
         />
