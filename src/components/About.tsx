@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import barberAction from "@/assets/barber-action.jpg";
+import { images } from "@/lib/placeholder-images";
 
 const About = () => {
   const ref = useRef(null);
@@ -19,7 +19,7 @@ const About = () => {
             className="relative"
           >
             <img
-              src={barberAction}
+              src={images.barberAction}
               alt="Barbeiro a trabalhar na Tejo Barber Shop"
               className="w-full rounded object-cover aspect-[4/5]"
               loading="lazy"

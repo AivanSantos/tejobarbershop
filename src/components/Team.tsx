@@ -1,29 +1,27 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Instagram } from "lucide-react";
-import barber1 from "@/assets/barber1.jpg";
-import barber2 from "@/assets/barber2.jpg";
-import barber3 from "@/assets/barber3.jpg";
+import { images } from "@/lib/placeholder-images";
 
 const team = [
   {
     name: "Aivan Santo",
     role: "Diretor",
-    image: barber1,
+    image: images.barber1,
     bio: "Fundador e diretor da Tejo Barber Shop, o Aivan lidera a equipa com visão e dedicação, garantindo que cada cliente recebe um serviço de excelência.",
     specialties: ["Gestão", "Atendimento Premium"],
   },
   {
     name: "Arthur Medrado",
     role: "Barbeiro & Sócio",
-    image: barber2,
+    image: images.barber2,
     bio: "Sócio e barbeiro talentoso, o Arthur traz criatividade e técnica apurada à equipa. Especialista em cortes modernos e tendências atuais.",
     specialties: ["Cortes Modernos", "Styling"],
   },
   {
     name: "Ricardo Pereira",
     role: "Barbeiro",
-    image: barber3,
+    image: images.barber3,
     bio: "O Ricardo combina precisão e atenção ao detalhe em cada serviço. Com um toque pessoal, garante resultados impecáveis para todos os clientes.",
     specialties: ["Barba Tradicional", "Cortes Clássicos"],
   },

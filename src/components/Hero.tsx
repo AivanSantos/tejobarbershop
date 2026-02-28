@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroImage from "@/assets/hero-barber.jpg";
+import { images } from "@/lib/placeholder-images";
 
 const Hero = () => {
   return (
@@ -7,7 +7,7 @@ const Hero = () => {
       {/* Background image */}
       <div className="absolute inset-0">
         <img
-          src={heroImage}
+          src={images.heroBarber}
           alt="Interior da Tejo Barber Shop"
           className="w-full h-full object-cover"
           loading="eager"

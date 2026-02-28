@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "@/assets/logo.png";
+import { images } from "@/lib/placeholder-images";
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
@@ -31,7 +31,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-4 md:px-8">
         <a href="#inicio" className="flex items-center">
-          <img src={logo} alt="Tejo Barber Shop" className="h-10 md:h-12" />
+          <img src={images.logo} alt="Tejo Barber Shop" className="h-10 md:h-12" />
         </a>
 
         {/* Desktop */}

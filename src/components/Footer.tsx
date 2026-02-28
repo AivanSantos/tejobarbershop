@@ -1,5 +1,5 @@
 import { Instagram, Mail } from "lucide-react";
-import logo from "@/assets/logo.png";
+import { images } from "@/lib/placeholder-images";
 
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
             <a href="#inicio">
-              <img src={logo} alt="Tejo Barber Shop" className="h-10" />
+              <img src={images.logo} alt="Tejo Barber Shop" className="h-10" />
             </a>
             <p className="text-muted-foreground text-sm font-body mt-2">
               Tradição e estilo em Póvoa de Santa Iria.

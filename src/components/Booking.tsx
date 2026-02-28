@@ -18,10 +18,16 @@ const timeSlots = [
   "17:00", "17:30", "18:00", "18:30",
 ];
 
+const FORMSPREE_ID = (import.meta.env.VITE_FORMSPREE_ID as string | undefined) || "mgolqrby";
+/** Email da empresa: configure no Formspree (Settings do formulário) como destino das marcações */
+export const COMPANY_EMAIL = "geral@tejobarbershop.pt";
+
 const Booking = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
     name: "",
     phone: "",
@@ -31,12 +37,41 @@ const Booking = () => {
     time: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-
   const update = (field: string, value: string) => setForm({ ...form, [field]: value });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError(null);
+    setLoading(true);
+
+    if (FORMSPREE_ID) {
+      try {
+        const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: form.name,
+            phone: form.phone,
+            service: form.service,
+            barber: form.barber,
+            date: form.date,
+            time: form.time,
+            _replyto: COMPANY_EMAIL,
+            _subject: `Marcação Tejo Barber Shop - ${form.name} - ${form.date} ${form.time}`,
+          }),
+        });
+        if (!res.ok) throw new Error("Erro ao enviar");
+        setSubmitted(true);
+      } catch {
+        setError("Não foi possível enviar a marcação. Tente novamente ou contacte-nos por telefone.");
+      } finally {
+        setLoading(false);
+      }
+    } else {
+      setSubmitted(true);
+      setLoading(false);
+    }
+  };
 
   if (submitted) {
     return (
@@ -180,11 +215,15 @@ const Booking = () => {
             </div>
           </div>
 
+          {error && (
+            <p className="text-destructive text-sm font-body text-center mt-2">{error}</p>
+          )}
           <button
             type="submit"
-            className="w-full bg-primary text-primary-foreground py-4 text-base font-semibold uppercase tracking-wider rounded hover:opacity-90 transition-opacity shadow-gold mt-4"
+            disabled={loading}
+            className="w-full bg-primary text-primary-foreground py-4 text-base font-semibold uppercase tracking-wider rounded hover:opacity-90 transition-opacity shadow-gold mt-4 disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            Confirmar Marcação
+            {loading ? "A enviar…" : "Confirmar Marcação"}
           </button>
         </motion.form>
       </div>

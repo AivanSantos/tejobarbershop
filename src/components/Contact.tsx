@@ -96,7 +96,7 @@ const Contact = () => {
             className="rounded overflow-hidden border border-border h-[400px]"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3108.5!2d-9.07!3d38.85!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1931!2sRua+da+Rep%C3%BAblica+109%2C+2626-145+P%C3%B3voa+de+Santa+Iria!5e0!3m2!1spt-PT!2spt!4v1"
+              src="https://maps.google.com/maps?q=Rua+da+Rep%C3%BAblica+109,+2626-145+P%C3%B3voa+de+Santa+Iria,+Portugal&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}

@@ -1,21 +1,16 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import portfolio1 from "@/assets/portfolio1.jpg";
-import portfolio2 from "@/assets/portfolio2.jpg";
-import portfolio3 from "@/assets/portfolio3.jpg";
-import portfolio4 from "@/assets/portfolio4.jpg";
-import portfolio5 from "@/assets/portfolio5.jpg";
-import portfolio6 from "@/assets/portfolio6.jpg";
+import { images } from "@/lib/placeholder-images";
 
 const filters = ["Todos", "Cortes", "Barba", "Premium"];
 
 const works = [
-  { src: portfolio1, alt: "Fade clássico", category: "Cortes" },
-  { src: portfolio2, alt: "Pompadour moderno", category: "Premium" },
-  { src: portfolio3, alt: "Barba completa", category: "Barba" },
-  { src: portfolio4, alt: "Textured crop", category: "Cortes" },
-  { src: portfolio5, alt: "Slick back com barba", category: "Premium" },
-  { src: portfolio6, alt: "Buzz cut com design", category: "Cortes" },
+  { src: images.portfolio[0], alt: "Fade clássico", category: "Cortes" },
+  { src: images.portfolio[1], alt: "Pompadour moderno", category: "Premium" },
+  { src: images.portfolio[2], alt: "Barba completa", category: "Barba" },
+  { src: images.portfolio[3], alt: "Textured crop", category: "Cortes" },
+  { src: images.portfolio[4], alt: "Slick back com barba", category: "Premium" },
+  { src: images.portfolio[5], alt: "Buzz cut com design", category: "Cortes" },
 ];
 
 const Portfolio = () => {
