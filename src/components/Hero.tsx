@@ -1,22 +1,8 @@
 import { motion } from "framer-motion";
 
-const HERO_BACKGROUND =
-  "https://img.freepik.com/fotos-premium/diferentes-ferramentas-de-cabeleireiro-em-mesa-cinzenta-contra-fundo-preto-espaco-para-texto_495423-82802.jpg?semt=ais_hybrid&w=740&q=80";
-
 const Hero = () => {
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image - ferramentas de cabeleireiro */}
-      <div className="absolute inset-0">
-        <img
-          src={HERO_BACKGROUND}
-          alt="Ferramentas de cabeleireiro na Tejo Barber Shop"
-          className="w-full h-full object-cover"
-          loading="eager"
-        />
-        <div className="absolute inset-0 bg-background/70" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
-      </div>
+    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-dark-gradient">
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
