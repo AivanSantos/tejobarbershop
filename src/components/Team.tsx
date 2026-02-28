@@ -6,14 +6,14 @@ import { images } from "@/lib/placeholder-images";
 const team = [
   {
     name: "Aivan Santo",
-    role: "Diretor",
+    role: "CEO",
     image: images.barber1,
     bio: "Fundador e diretor da Tejo Barber Shop, o Aivan lidera a equipa com visão e dedicação, garantindo que cada cliente recebe um serviço de excelência.",
     specialties: ["Gestão", "Atendimento Premium"],
   },
   {
     name: "Arthur Medrado",
-    role: "Barbeiro & Sócio",
+    role: "Barbeiro e Gerente",
     image: "/Arthur.jpeg",
     bio: "Sócio e barbeiro talentoso, o Arthur traz criatividade e técnica apurada à equipa. Especialista em cortes modernos e tendências atuais.",
     specialties: ["Cortes Modernos", "Styling"],
