@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const HERO_BACKGROUND = "https://ideogram.ai/assets/image/balanced/response/kzDYCfuNSSCIlmEGNMhK_A@2k";
+const HERO_BACKGROUND = "https://chatgpt.com/backend-api/estuary/content?id=file_00000000f2a0720a9c124def93379cdb&ts=492293&p=fs&cid=1&sig=5acaa5f44d11cc341ca2cac476a82a55805829a4bda257543a1eef379b9768bf&v=0";
 
 const Hero = () => {
   return (
