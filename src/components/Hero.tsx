@@ -1,14 +1,16 @@
 import { motion } from "framer-motion";
-import { images } from "@/lib/placeholder-images";
+
+const HERO_BACKGROUND =
+  "https://media.istockphoto.com/id/1288515834/pt/foto/aerial-view-of-sanctuary-of-christ-the-king-santuario-de-cristo-rei-drone-photo-at-sunrise.jpg?s=612x612&w=0&k=20&c=0x04O1m_gB6DrSRalSRUkwzCoscWT9KSNm18eoZHX_M=";
 
 const Hero = () => {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image */}
+      {/* Background image - Cristo Rei ao nascer do sol */}
       <div className="absolute inset-0">
         <img
-          src={images.heroBarber}
-          alt="Interior da Tejo Barber Shop"
+          src={HERO_BACKGROUND}
+          alt="Vista aérea do Santuário de Cristo Rei ao nascer do sol, Portugal"
           className="w-full h-full object-cover"
           loading="eager"
         />
