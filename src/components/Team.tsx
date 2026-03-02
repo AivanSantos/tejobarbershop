@@ -1,13 +1,12 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Instagram } from "lucide-react";
-import { images } from "@/lib/placeholder-images";
 
 const team = [
   {
     name: "Aivan Santo",
     role: "CEO",
-    image: images.barber1,
+    image: "/Aivan.png",
     bio: "Fundador e diretor da Tejo Barber Shop, o Aivan lidera a equipa com visão e dedicação, garantindo que cada cliente recebe um serviço de excelência.",
     specialties: ["Gestão", "Atendimento Premium"],
   },
